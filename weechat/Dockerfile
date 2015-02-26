@@ -3,7 +3,8 @@ From debian:jessie
 RUN apt-get update && apt-get install -y \
   ca-certificates \
   curl \
-  wget
+  wget \
+  libencode-locale-perl
 
 RUN touch /etc/apt/sources.list.d/weechat.list
 RUN echo "deb http://debian.weechat.org jessie main" | tee /etc/apt/sources.list.d/weechat.list
